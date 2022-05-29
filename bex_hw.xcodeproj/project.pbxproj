@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA6FA1E26971CA06A057B450 /* Pods_bex_hw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 543CB1702C52F8B310FC5A71 /* Pods_bex_hw.framework */; };
+		ECD8E12628437E4000F5FF4D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8E12528437E4000F5FF4D /* Order.swift */; };
 		ECDD976D284145B600361C12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD976C284145B600361C12 /* AppDelegate.swift */; };
 		ECDD976F284145B600361C12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD976E284145B600361C12 /* SceneDelegate.swift */; };
-		ECDD9771284145B600361C12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD9770284145B600361C12 /* ViewController.swift */; };
-		ECDD9774284145B600361C12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDD9772284145B600361C12 /* Main.storyboard */; };
+		ECDD9771284145B600361C12 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD9770284145B600361C12 /* MenuViewController.swift */; };
 		ECDD9776284145B700361C12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECDD9775284145B700361C12 /* Assets.xcassets */; };
 		ECDD9779284145B700361C12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDD9777284145B700361C12 /* LaunchScreen.storyboard */; };
+		ECDD978128416BB600361C12 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD978028416BB600361C12 /* OrderViewController.swift */; };
+		ECFDA9AF284201030059F5D9 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9AE284201030059F5D9 /* MenuCollectionViewCell.swift */; };
+		ECFDA9B1284201E60059F5D9 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9B0284201E60059F5D9 /* Menu.swift */; };
+		ECFDA9BA284264180059F5D9 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9B9284264180059F5D9 /* PaymentViewController.swift */; };
+		ECFDA9BE2843508C0059F5D9 /* OrdersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9BD2843508C0059F5D9 /* OrdersList.swift */; };
+		ECFDA9C028435C050059F5D9 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9BF28435C050059F5D9 /* OrderTableViewCell.swift */; };
+		ECFDA9C528436A5D0059F5D9 /* PaymentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9C428436A5D0059F5D9 /* PaymentCollectionViewCell.swift */; };
+		ECFDA9C728436B2F0059F5D9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFDA9C628436B2F0059F5D9 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09D2E8DDC3EC89C5B708BCA0 /* Pods-bex_hw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bex_hw.release.xcconfig"; path = "Target Support Files/Pods-bex_hw/Pods-bex_hw.release.xcconfig"; sourceTree = "<group>"; };
+		25411EC30B9CEB9F8FBF0209 /* Pods-bex_hw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bex_hw.debug.xcconfig"; path = "Target Support Files/Pods-bex_hw/Pods-bex_hw.debug.xcconfig"; sourceTree = "<group>"; };
+		543CB1702C52F8B310FC5A71 /* Pods_bex_hw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bex_hw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECD8E12528437E4000F5FF4D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		ECDD9769284145B600361C12 /* bex_hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bex_hw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECDD976C284145B600361C12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECDD976E284145B600361C12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECDD9770284145B600361C12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECDD9773284145B600361C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECDD9770284145B600361C12 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		ECDD9775284145B700361C12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECDD9778284145B700361C12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECDD977A284145B700361C12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECDD978028416BB600361C12 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		ECFDA9AE284201030059F5D9 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECFDA9B0284201E60059F5D9 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		ECFDA9B9284264180059F5D9 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		ECFDA9BD2843508C0059F5D9 /* OrdersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersList.swift; sourceTree = "<group>"; };
+		ECFDA9BF28435C050059F5D9 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		ECFDA9C428436A5D0059F5D9 /* PaymentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCollectionViewCell.swift; sourceTree = "<group>"; };
+		ECFDA9C628436B2F0059F5D9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,86 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6FA1E26971CA06A057B450 /* Pods_bex_hw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6461FD35227C52E7EA1C79A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25411EC30B9CEB9F8FBF0209 /* Pods-bex_hw.debug.xcconfig */,
+				09D2E8DDC3EC89C5B708BCA0 /* Pods-bex_hw.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A42E6F35161734DA0668E17C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				543CB1702C52F8B310FC5A71 /* Pods_bex_hw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECD8E11F28437D4B00F5FF4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9B9284264180059F5D9 /* PaymentViewController.swift */,
+			);
+			name = Controller;
+			path = Controller/Controller;
+			sourceTree = "<group>";
+		};
+		ECD8E12028437D5800F5FF4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9C428436A5D0059F5D9 /* PaymentCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECD8E12128437D6100F5FF4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9C628436B2F0059F5D9 /* Date.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECD8E12228437D6C00F5FF4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD978028416BB600361C12 /* OrderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECD8E12328437D7500F5FF4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9BF28435C050059F5D9 /* OrderTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECD8E12428437E3000F5FF4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8E12528437E4000F5FF4D /* Order.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		ECDD9760284145B600361C12 = {
 			isa = PBXGroup;
 			children = (
 				ECDD976B284145B600361C12 /* bex_hw */,
 				ECDD976A284145B600361C12 /* Products */,
+				6461FD35227C52E7EA1C79A9 /* Pods */,
+				A42E6F35161734DA0668E17C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +145,95 @@
 		ECDD976B284145B600361C12 /* bex_hw */ = {
 			isa = PBXGroup;
 			children = (
-				ECDD976C284145B600361C12 /* AppDelegate.swift */,
-				ECDD976E284145B600361C12 /* SceneDelegate.swift */,
-				ECDD9770284145B600361C12 /* ViewController.swift */,
-				ECDD9772284145B600361C12 /* Main.storyboard */,
-				ECDD9775284145B700361C12 /* Assets.xcassets */,
-				ECDD9777284145B700361C12 /* LaunchScreen.storyboard */,
+				ECFDA9BC284350820059F5D9 /* Utility */,
+				ECFDA9AB284200CC0059F5D9 /* Presetation Layer */,
+				ECFDA9AA284200BF0059F5D9 /* Application Layer */,
 				ECDD977A284145B700361C12 /* Info.plist */,
 			);
 			path = bex_hw;
+			sourceTree = "<group>";
+		};
+		ECFDA9AA284200BF0059F5D9 /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD976E284145B600361C12 /* SceneDelegate.swift */,
+				ECDD976C284145B600361C12 /* AppDelegate.swift */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		ECFDA9AB284200CC0059F5D9 /* Presetation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9B8284222DF0059F5D9 /* PaymentPage */,
+				ECFDA9AD284200E00059F5D9 /* Order */,
+				ECFDA9AC284200D80059F5D9 /* Menu */,
+			);
+			path = "Presetation Layer";
+			sourceTree = "<group>";
+		};
+		ECFDA9AC284200D80059F5D9 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9B42842208E0059F5D9 /* Model */,
+				ECFDA9B3284220860059F5D9 /* View */,
+				ECFDA9B2284220730059F5D9 /* Controller */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		ECFDA9AD284200E00059F5D9 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8E12428437E3000F5FF4D /* Model */,
+				ECD8E12328437D7500F5FF4D /* View */,
+				ECD8E12228437D6C00F5FF4D /* Controller */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		ECFDA9B2284220730059F5D9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD9770284145B600361C12 /* MenuViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECFDA9B3284220860059F5D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9AE284201030059F5D9 /* MenuCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECFDA9B42842208E0059F5D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECFDA9B0284201E60059F5D9 /* Menu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECFDA9B8284222DF0059F5D9 /* PaymentPage */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8E11F28437D4B00F5FF4D /* Controller */,
+				ECD8E12028437D5800F5FF4D /* View */,
+				ECD8E12128437D6100F5FF4D /* Model */,
+			);
+			path = PaymentPage;
+			sourceTree = "<group>";
+		};
+		ECFDA9BC284350820059F5D9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD9777284145B700361C12 /* LaunchScreen.storyboard */,
+				ECDD9775284145B700361C12 /* Assets.xcassets */,
+				ECFDA9BD2843508C0059F5D9 /* OrdersList.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +243,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECDD977D284145B700361C12 /* Build configuration list for PBXNativeTarget "bex_hw" */;
 			buildPhases = (
+				19C1F560801C8196F3A1134D /* [CP] Check Pods Manifest.lock */,
 				ECDD9765284145B600361C12 /* Sources */,
 				ECDD9766284145B600361C12 /* Frameworks */,
 				ECDD9767284145B600361C12 /* Resources */,
+				106CF9C673A5109A02D8529F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +298,76 @@
 			files = (
 				ECDD9779284145B700361C12 /* LaunchScreen.storyboard in Resources */,
 				ECDD9776284145B700361C12 /* Assets.xcassets in Resources */,
-				ECDD9774284145B600361C12 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		106CF9C673A5109A02D8529F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bex_hw/Pods-bex_hw-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bex_hw/Pods-bex_hw-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bex_hw/Pods-bex_hw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19C1F560801C8196F3A1134D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bex_hw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECDD9765284145B600361C12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECDD9771284145B600361C12 /* ViewController.swift in Sources */,
+				ECFDA9BE2843508C0059F5D9 /* OrdersList.swift in Sources */,
+				ECDD9771284145B600361C12 /* MenuViewController.swift in Sources */,
 				ECDD976D284145B600361C12 /* AppDelegate.swift in Sources */,
+				ECFDA9BA284264180059F5D9 /* PaymentViewController.swift in Sources */,
 				ECDD976F284145B600361C12 /* SceneDelegate.swift in Sources */,
+				ECFDA9C528436A5D0059F5D9 /* PaymentCollectionViewCell.swift in Sources */,
+				ECFDA9C728436B2F0059F5D9 /* Date.swift in Sources */,
+				ECFDA9C028435C050059F5D9 /* OrderTableViewCell.swift in Sources */,
+				ECDD978128416BB600361C12 /* OrderViewController.swift in Sources */,
+				ECD8E12628437E4000F5FF4D /* Order.swift in Sources */,
+				ECFDA9AF284201030059F5D9 /* MenuCollectionViewCell.swift in Sources */,
+				ECFDA9B1284201E60059F5D9 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECDD9772284145B600361C12 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECDD9773284145B600361C12 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECDD9777284145B700361C12 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +495,7 @@
 		};
 		ECDD977E284145B700361C12 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25411EC30B9CEB9F8FBF0209 /* Pods-bex_hw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,7 +505,6 @@
 				INFOPLIST_FILE = bex_hw/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,12 +516,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		ECDD977F284145B700361C12 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09D2E8DDC3EC89C5B708BCA0 /* Pods-bex_hw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,7 +532,6 @@
 				INFOPLIST_FILE = bex_hw/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,7 +543,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

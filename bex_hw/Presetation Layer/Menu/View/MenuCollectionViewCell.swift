@@ -2,17 +2,20 @@
 //  MenuCollectionViewCell.swift
 //  bex_hw
 //
-//  Created by Abylbek Khassenov on 28.05.2022.
+//  Created by Nurpeiis Bexultan on 28.05.2022.
 //
 
 import UIKit
 
 class MenuCollectionViewCell: UICollectionViewCell {
-    static let identifier = "MenuCollectionViewCell"
     
+    static let identifier = "MenuCollectionViewCell"
+    private var oldValue: Double = 0
+    private var model: Menu?
     
     private let cellImage: UIImageView = {
         let imageView = UIImageView()
+        imageView.layer.cornerRadius = 12
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -33,7 +36,11 @@ class MenuCollectionViewCell: UICollectionViewCell {
     }()
     
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, subtitleLabel, stepper, valueNumber])
+        let stackView = UIStackView(arrangedSubviews: [
+            titleLabel,
+            subtitleLabel,
+            secondStackView
+        ])
         stackView.axis = .vertical
         stackView.spacing = 5
         return stackView
@@ -46,24 +53,47 @@ class MenuCollectionViewCell: UICollectionViewCell {
     
     private let stepper: UIStepper = {
         let stepper = UIStepper(frame: CGRect(x: 100, y: 200, width: 0, height: 0))
-        stepper.wraps = true
+//        stepper.wraps = true
         stepper.autorepeat = true
-        stepper.maximumValue = 20
-        
         stepper.addTarget(self, action: #selector(stepperValueChanged(_:)), for: .valueChanged)
         return stepper
     }()
     
     private let valueNumber: UILabel = {
         let label = UILabel()
+        label.text = "0 kg"
+        return label
+    }()
+    
+    
+    private lazy var secondStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [stepper, valueNumber])
+        stackView.axis = .horizontal
+        stackView.spacing = 5
+        return stackView
+    }()
+    
+    private let likeImageView: UIImageView = {
+         let likeImageView = UIImageView(image: UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate))
+         likeImageView.contentMode = .scaleAspectFit
+         likeImageView.isUserInteractionEnabled = true
+         return likeImageView
+     }()
+    
+    private let bonusLabel: UILabel = {
+        let label = UILabel()
+        label.text = "20% для friends"
+        label.backgroundColor = .yellow
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 5
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .systemGray6
-    
         setUpLayouts()
+        oldValue = stepper.value
     }
        
     required init?(coder: NSCoder) {
@@ -86,26 +116,62 @@ class MenuCollectionViewCell: UICollectionViewCell {
             $0.height.equalTo(150)
             $0.width.equalTo(150)
         }
-        
+        cellImage.addSubview(likeImageView)
+        likeImageView.snp.makeConstraints {
+            $0.right.equalToSuperview().inset(10)
+            $0.top.equalToSuperview().inset(10)
+        }
+        cellImage.addSubview(bonusLabel)
+        bonusLabel.snp.makeConstraints {
+            $0.left.equalToSuperview().inset(5)
+            $0.bottom.equalToSuperview().inset(5)
+        }
         contentView.addSubview(stackView)
         stackView.snp.makeConstraints {
             $0.top.equalTo(cellImage.snp.bottom).offset(5)
-            $0.left.equalToSuperview().inset(1)
+            $0.left.equalToSuperview().inset(10)
         }
-    
     }
     
     @objc private func stepperValueChanged(_ stepper: UIStepper){
-        print("Chnaged Value: \(stepper.value)")
-          stepper.stepValue = 1
-          print("Chnaged Value: \(stepper.value)")
-        valueNumber.text = String(Int(stepper.value))
-        
+        if (stepper.value > oldValue) {
+            oldValue = oldValue + 1
+            //Your Code You Wanted To Perform On Increment
+            
+            let totalPrice = (model?.price ?? 0) * Int(stepper.value)
+            subtitleLabel.text = String(totalPrice) + " тг"
+            if OrdersList.shared.basketList.contains(where: { $0.menu?.id == model?.id }) {
+                if let index = OrdersList.shared.basketList.firstIndex(where: { $0.menu?.id == model?.id }) {
+                    OrdersList.shared.basketList[index].count += 1
+                }
+            } else {
+                OrdersList.shared.basketList.append(Basket(menu: model, count: Int(stepper.value)))
+            }
+        }
+        else {
+             oldValue = oldValue - 1
+             //Your Code You Wanted To Perform On Decrement
+            let totalPrice = (model?.price ?? 0) * Int(stepper.value)
+            subtitleLabel.text = String(totalPrice) + " тг"
+            if OrdersList.shared.basketList.contains(where: { $0.menu?.id == model?.id }) {
+                if let index = OrdersList.shared.basketList.firstIndex(where: { $0.menu?.id == model?.id }) {
+                    if OrdersList.shared.basketList[index].count > 0 {
+                        OrdersList.shared.basketList[index].count -= 1
+                    } else {
+                        OrdersList.shared.basketList.removeAll(where: { $0.menu?.id == model?.id })
+                    }
+                }
+            }
+        }
+        valueNumber.text = String(Int(stepper.value)) + " kg"
     }
     
-    public func configure(with items: Menu){
+    func configure(with items: Menu){
+
+        self.model = items
+        
         cellImage.image = items.image
         titleLabel.text = items.title
-        subtitleLabel.text = items.subtitle
+        subtitleLabel.text = String(Int(stepper.value) * items.price) + " тг"
     }
 }

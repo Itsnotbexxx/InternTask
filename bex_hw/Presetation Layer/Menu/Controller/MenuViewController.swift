@@ -10,9 +10,12 @@ import SnapKit
 
 class MenuViewController: UIViewController {
     
+    // MARK: - VARIABLES
+//    var listOfOrders
+    
     private let items: [Menu] = [
-        Menu(image: UIImage(named: "cher"), title: "Черешня от Arbuz.kz", subtitle: "кг"),
-        Menu(image: UIImage(named: "arb"), title: "Арбуз от Arbuz.kz", subtitle: "кг")
+        Menu(id: 1, image: UIImage(named: "arbuz2"), title: "Арбуз с Шымкента", price: 1600),
+        Menu(id: 2, image: UIImage(named: "arb"), title: "Арбуз от Arbuz.kz", price: 2000)
     ]
     
     private let collectionView: UICollectionView = {
@@ -60,6 +63,7 @@ class MenuViewController: UIViewController {
             action: nil
         )
         navigationItem.leftBarButtonItems = [item]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .search)
     }
 
     private func setUpLayouts(){
@@ -67,7 +71,7 @@ class MenuViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.right.left.equalToSuperview()
             $0.top.equalTo(view.safeAreaLayoutGuide).inset(10)
-            $0.height.equalTo(250)
+            $0.height.equalTo(collectionView.snp_width)
         }
     }
 }
@@ -82,8 +86,6 @@ extension MenuViewController: UICollectionViewDelegate{
         cell.configure(with: item)
         return cell
     }
-
-
 }
 
 extension MenuViewController: UICollectionViewDataSource{

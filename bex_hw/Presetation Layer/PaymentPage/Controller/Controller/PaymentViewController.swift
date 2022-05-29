@@ -2,7 +2,7 @@
 //  PaymentViewController.swift
 //  bex_hw
 //
-//  Created by Abylbek Khassenov on 28.05.2022.
+//  Created by Nurpeiis Bexultan on 28.05.2022.
 //
 
 import UIKit
@@ -133,6 +133,32 @@ class PaymentViewController: UIViewController {
         stackView.spacing = 10
         return stackView
     }()
+    
+    private let paymentTitle: UILabel = {
+        let label = UILabel()
+        label.text = "Оплата"
+        return label
+    }()
+    
+    private let dataPayemnt = ["Cash", "Card"]
+    
+    lazy var paymentPicker: UIPickerView = {
+        let picker = UIPickerView()
+        picker.dataSource = self
+        picker.delegate = self
+        return picker
+    }()
+    
+    private let payButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("Оплатить", for: .normal)
+        btn.titleLabel?.textColor = .white
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        btn.backgroundColor = .systemGreen
+        btn.layer.cornerRadius = 12
+        btn.addTarget(self, action: #selector(touchBtn), for: .touchUpInside)
+        return btn
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,6 +168,7 @@ class PaymentViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
+    
     
     private func setUpLayout(){
         view.addSubview(addressTitle)
@@ -206,6 +233,37 @@ class PaymentViewController: UIViewController {
             $0.left.equalToSuperview().inset(16)
             $0.right.equalToSuperview().inset(16)
         }
+        
+        view.addSubview(paymentTitle)
+        paymentTitle.snp.makeConstraints {
+            $0.top.equalTo(stackView.snp.bottom).offset(16)
+            $0.left.equalToSuperview().inset(16)
+        }
+        
+        view.addSubview(paymentPicker)
+        paymentPicker.snp.makeConstraints {
+            $0.top.equalTo(paymentTitle.snp.bottom).offset(16)
+            $0.left.equalToSuperview().inset(16)
+            $0.right.equalToSuperview().inset(16)
+            $0.height.equalTo(50)
+        }
+        
+        view.addSubview(payButton)
+        payButton.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(15)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(50)
+            $0.width.equalTo(200)
+        }
+    }
+    
+    @objc private func touchBtn(){
+        let alert = UIAlertController(title: "Заказ успешно оформлен!", message: "Ожидайте", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ждууу!!!", style: UIAlertAction.Style.default, handler: { alert in
+            
+            self.navigationController?.popViewController(animated: true)
+        } ))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -224,7 +282,7 @@ extension PaymentViewController: UICollectionViewDelegate{
         guard let cell = collectionView.cellForItem(at: indexPath) as? PaymentCollectionViewCell else {
                         return
                 }
-        cell.backgroundColor = .systemGreen
+            cell.backgroundColor = .systemGreen
     }
 
 }
@@ -242,4 +300,24 @@ extension PaymentViewController: UICollectionViewDelegateFlowLayout{
         let height = width / 1.4
         return CGSize(width: width, height: height)
     }
+}
+
+extension PaymentViewController: UIPickerViewDelegate{
+  
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataPayemnt[row]
+    }
+}
+
+extension PaymentViewController: UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataPayemnt.count
+    }
+    
+    
 }

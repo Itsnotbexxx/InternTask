@@ -2,7 +2,7 @@
 //  OrderViewController.swift
 //  bex_hw
 //
-//  Created by Abylbek Khassenov on 28.05.2022.
+//  Created by Nurpeiis Bexultan on 28.05.2022.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ class OrderViewController: UIViewController {
         tableView.separatorStyle = .none
         return tableView
     }()
-    private lazy var payButton: UIButton = {
+    private let  payButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("Оплатить", for: .normal)
         btn.titleLabel?.textColor = .white
@@ -52,15 +52,16 @@ class OrderViewController: UIViewController {
     
     private func setupViews() {
         view.addSubview(tableView)
-        view.addSubview(payButton)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
-        payButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-120)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(50)
-            make.width.equalTo(200)
+        
+        view.addSubview(payButton)
+        payButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().offset(-120)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(50)
+            $0.width.equalTo(200)
         }
     }
     

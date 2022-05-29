@@ -14,43 +14,46 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-              
-              window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-              window?.windowScene = windowScene
-              window?.rootViewController = creatTabBar()
-              window?.makeKeyAndVisible()
+//        let window = UIWindow(windowScene: windowScene)
+//        let nav = UINavigationController(rootViewController: PaymentViewController())
+//        window.rootViewController = nav
+//        window.makeKeyAndVisible()
+//        self.window = window
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        window?.rootViewController = creatTabBar()
+        window?.makeKeyAndVisible()
     }
-    
+
     func creatMenuNC() -> UINavigationController{
            let myMenuVC = MenuViewController()
             myMenuVC.tabBarItem = UITabBarItem(
                title: "Menu",
-               image: UIImage(systemName: "photo"),
+               image: UIImage(systemName: "house"),
                tag: 0
            )
-           
+
            return UINavigationController(rootViewController: myMenuVC)
        }
-    
+
     func creatOrderNC() -> UINavigationController{
            let myOrderVC = OrderViewController()
             myOrderVC.tabBarItem = UITabBarItem(
                title: "Order",
-               image: UIImage(systemName: "person"),
+               image: UIImage(systemName: "heart"),
                tag: 1
            )
-           
+
            return UINavigationController(rootViewController: myOrderVC)
        }
-    
+
     func creatTabBar() -> UITabBarController{
           let tabbar = UITabBarController()
-          UITabBar.appearance().tintColor = .systemBlue
+          UITabBar.appearance().tintColor = .black
           UITabBar.appearance().barTintColor = .systemGray6
           tabbar.viewControllers = [
             creatMenuNC(),
             creatOrderNC()
-            
           ]
           return tabbar
       }

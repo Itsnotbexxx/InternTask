@@ -2,7 +2,7 @@
 //  PaymentCollectionViewCell.swift
 //  bex_hw
 //
-//  Created by Abylbek Khassenov on 29.05.2022.
+//  Created by Nurpeiis Bexultan on 29.05.2022.
 //
 
 import UIKit
