@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  bex_hw
 //
-//  Created by Abylbek Khassenov on 27.05.2022.
+//  Created by Nurpeiis Bexultan on 27.05.2022.
 //
 
 import UIKit
